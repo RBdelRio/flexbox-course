@@ -1,0 +1,95 @@
+
+html{
+    font-family: 'Oxygen', sans-serif;
+}
+
+body{
+    margin: 0px;
+}
+
+.top-nav{
+    background-color: #064676;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+}
+
+
+.top-nav .top-nav-links-left,
+.top-nav .top-nav-links-right{
+    display: flex;
+    flex: 1;
+}
+
+.top-nav .top-nav-links-right{
+    justify-content: right;
+}
+
+ .top-nav .link {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    background: #223047;
+    color: white;
+    width: auto;
+}
+
+.top-nav .link:hover,
+.top-nav .link:active {
+    color: #223047;
+    background: white;
+}
+.top-nav .name {
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+.top-nav a {
+    text-decoration: none;
+}
+
+.top-nav .toggle {
+    display: none;
+}
+
+@media  (max-width: 42em) {
+    .top-nav div{
+        display: flex;
+        flex-direction: column;
+    }
+    .top-nav .toggle,
+    .top-nav .name{
+    display: inline-block;
+}
+    .top-nav .toggle{
+        padding: 1em;
+        color: black;
+        width: 20px;
+    }
+
+    .top-nav.active .toggle {
+        background: #223047;
+        color: white;
+    }
+    .top-nav .name {
+        text-align: left;
+       width: calc(100vw-20px);
+    }
+
+    
+    .top-nav .top-nav-links-left,
+    .top-nav .top-nav-links-right {
+        display: none;
+    }
+   
+    .top-nav.active div{
+        display: block;
+    }
+    
+    
+}
